@@ -1,0 +1,113 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+
+<!-- Hero -->
+<section class="et-hero-tabs">
+    <div >
+        <h1> Week: 1 - {{ messages.0.title }}</h1>
+        <h3>Sliding content with sticky tab nav</h3>
+        </div>
+    </div>
+</section>
+
+
+<div class="main-sec">
+    <div class="main">
+        <h1>Meditation Times</h1>
+
+        <table>
+            {% for message in messages %}
+            
+            
+                <tr class='tr'>
+                    <td>{{ message.week }}</td>
+                    <td>{{ message.title }}</td>
+                    <td>{{ message.message }}</td>
+                    <td>
+                        <a href="{% url 'message' message.id %}">
+                            Read More
+                        </a>
+                    </td>
+                </tr>
+            
+
+
+            {% empty %}
+
+            <h3> No Items in List </h3>
+
+            {% endfor %}
+        </table>
+
+    </div>
+</div>
+
+
+<div class="container">
+    <h1>Meditation Times</h1>
+    <div class="category" id="brand1">
+        <h2>Apple</h2>
+        <div class="item">
+            <img src="https://static-jaymart.com/ecom/public/2hzMS2Xn4g9FzJwUbICYQdOuvNI.jpg" alt="iPhone 14">
+            <div class="info">
+                <h3>iPhone 14</h3>
+                <p>Featuring a 6.1-inch Super Retina XDR display, the iPhone 14 combines sleek design with powerful performance. Equipped with Apple's A15 Bionic chip and advanced camera system, it delivers exceptional photography and video capabilities.</p>
+                <p>Starting at $799</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://static-jaymart.com/ecom/public/2hzMS2Xn4g9FzJwUbICYQdOuvNI.jpg" alt="iPhone 14 Pro">
+            <div class="info">
+                <h3>iPhone 14 Pro</h3>
+                <p>The iPhone 14 Pro offers a stunning 6.1-inch ProMotion display with a 120Hz refresh rate for smooth scrolling and enhanced graphics. With the A16 Bionic chip and Pro camera system, it provides industry-leading performance and superior photographic capabilities.</p>
+                <p>Starting at $999</p>
+            </div>
+        </div>
+    </div>
+    <div class="category" id="brand2">
+        <h2>Samsung</h2>
+        <div class="item">
+            <img src="https://static-jaymart.com/ecom/public/2hzMS2Xn4g9FzJwUbICYQdOuvNI.jpg" alt="Galaxy S23">
+            <div class="info">
+                <h3>Galaxy S23</h3>
+                <p>The Samsung Galaxy S23 features a vibrant 6.1-inch Dynamic AMOLED 2X display, offering sharp visuals and deep colors. Powered by the Snapdragon 8 Gen 2 processor, it delivers smooth performance and includes a versatile camera system for all your photography needs.</p>
+                <p>Starting at $799</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://static-jaymart.com/ecom/public/2hzMS2Xn4g9FzJwUbICYQdOuvNI.jpg" alt="Galaxy S23 Ultra">
+            <div class="info">
+                <h3>Galaxy S23 Ultra</h3>
+                <p>The Galaxy S23 Ultra comes with a large 6.8-inch Dynamic AMOLED 2X display and an S Pen for enhanced productivity. It features a powerful Snapdragon 8 Gen 2 processor and a versatile quad-camera setup, including a 200MP main sensor for stunning photo and video quality.</p>
+                <p>Starting at $1199</p>
+            </div>
+        </div>
+    </div>
+    <div class="category" id="brand3">
+        <h2>Google</h2>
+        <div class="item">
+            <img src="https://static-jaymart.com/ecom/public/2hzMS2Xn4g9FzJwUbICYQdOuvNI.jpg" alt="Pixel 8">
+            <div class="info">
+                <h3>Pixel 8</h3>
+                <p>The Google Pixel 8 features a 6.2-inch OLED display and the latest Google Tensor G3 chip for exceptional performance and AI-driven features. It excels in computational photography with its advanced camera system and offers a clean Android experience with timely updates.</p>
+                <p>Starting at $699</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://static-jaymart.com/ecom/public/2hzMS2Xn4g9FzJwUbICYQdOuvNI.jpg" alt="Pixel 8 Pro">
+            <div class="info">
+                <h3>Pixel 8 Pro</h3>
+                <p>The Pixel 8 Pro offers a 6.7-inch LTPO OLED display with a 120Hz refresh rate. With the Tensor G3 chip and an advanced camera system featuring a 50MP main sensor, it provides superior performance, vibrant visuals, and excellent photo quality.</p>
+                <p>Starting at $999</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock  %}
+

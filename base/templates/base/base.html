@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Meditation Times</title>
+    <link rel="stylesheet" href="{% static 'base/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <!--<script src="{% static 'base/script.js' %}"/>-->
+   </head>
+<body>
+
+    <section >
+        <div class="et-hero-tabs-container">
+            <!--
+            <a class="et-hero-tab" href="#messages">Messages</a>
+            <a class="et-hero-tab" href="#tab-flexbox">Flexbox</a>
+            <a class="et-hero-tab" href="#tab-react">React</a>
+            <a class="et-hero-tab" href="#tab-angular">Angular</a>
+            <a class="et-hero-tab" href="#tab-other">Other</a>
+            <span class="et-hero-tab-slider"></span>
+            -->
+            
+
+            <div style='width:50px;'></div>
+
+            <a><h1><</h1></a>
+            <div class="year">
+                <h1>2024</h1>
+            </div>
+
+            <a><h1>></h1></a>
+
+            <div style='width:250px;'></div>
+
+            <p>Higher Life Centre (2024)</p>
+        </div>
+    </section>
+
+    
+    {% block content %}
+
+    {% endblock  %}
+
+</body>
+
+<footer>
+    <h1>Footer<h1>
+</footer>
+</html>
+
