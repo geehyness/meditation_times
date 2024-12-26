@@ -1,0 +1,50 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+
+<!-- Hero -->
+<section class="et-hero-tabs">
+    <div >
+        <h1> Week: 1 - {{ messages.0.title }}</h1>
+        <h3>Sliding content with sticky tab nav</h3>
+        </div>
+    </div>
+</section>
+
+
+<div class="main-sec">
+    <div class="main">
+        <h1>Meditation Times</h1>
+
+        <table>
+            {% for message in messages %}
+            
+            
+                <tr class='tr'>
+                    <td>{{ message.week }}</td>
+                    <td>{{ message.title }}</td>
+                    <td>{{ message.message }}</td>
+                    <td>
+                        <a href="{% url 'message' message.id %}">
+                            Read More
+                        </a>
+                    </td>
+                </tr>
+            
+
+
+            {% empty %}
+
+            <h3> No Items in List </h3>
+
+            {% endfor %}
+        </table>
+
+    </div>
+</div>
+
+{% endblock  %}
+
