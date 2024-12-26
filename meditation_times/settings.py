@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-m0igsuptixx4=0&9@qg_xm*dn*w#a*oxs**=^*96=%_26(8ig&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['meditation-times.onrender.com']
 
 
 # Application definition
