@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-m0igsuptixx4=0&9@qg_xm*dn*w#a*oxs**=^*96=%_26(8ig&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['meditation-times.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1','meditation-times.onrender.com']
 
 
 # Application definition
@@ -119,9 +119,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
+#STATICFILES_DIRS = [
+#    os.path.join(BASE_DIR, 'static'),
+#]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
